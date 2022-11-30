@@ -48,7 +48,7 @@ export const migrateTeam = async ({
     );
   } else {
     console.info(
-      `Команда c именем ${migrateTeam} уже существует в целевом пространстве`
+      `Команда c именем ${migrateTeamName} уже существует в целевом пространстве`
     );
   }
 
