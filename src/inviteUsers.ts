@@ -22,6 +22,7 @@ export const inviteUsers = async ({
       ({ email }) => email === userForInvite.email
     );
     if (isMigrated) {
+      console.log(`${userForInvite.name} (${userForInvite.email}) - пользователь подтвердил свое участие`)
       continue;
     }
 
@@ -31,7 +32,7 @@ export const inviteUsers = async ({
     if (isInvited) {
       needUserMigration = true;
       console.info(
-        `Пользователь ${userForInvite.name} (${userForInvite.email}) уже приглашен, ожидается его подтверждение`
+        `${userForInvite.name} (${userForInvite.email}) - ожидается подтверждение`
       );
     } else {
       needUserMigration = true;
@@ -46,7 +47,7 @@ export const inviteUsers = async ({
   }
   if (needUserMigration) {
     console.log(
-      "Дождитесь пока вся команда примет приглашения и запустите утилиту еще раз"
+      "Дождитесь пока вся команда примет приглашения и запустите скрипт еще раз"
     );
     return false;
   }
