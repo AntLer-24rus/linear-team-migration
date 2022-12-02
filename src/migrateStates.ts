@@ -32,7 +32,7 @@ export const migrateStates = async ({
     console.info(
       `Перенесен state ${srcState.name} (${
         res.success ? "Ok" : "Error"
-      }) ${++i}/${needMigrateStates.length + 1}`
+      }) ${++i}/${needMigrateStates.length}`
     );
   }
 };

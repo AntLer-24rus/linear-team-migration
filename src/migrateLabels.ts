@@ -30,7 +30,7 @@ export const migrateLabels = async ({
     console.info(
       `Перенесен label ${srcLabel.name} (${
         res.success ? "Ok" : "Error"
-      }) ${++i}/${needMigrateLabels.length + 1}`
+      }) ${++i}/${needMigrateLabels.length}`
     );
   }
 };

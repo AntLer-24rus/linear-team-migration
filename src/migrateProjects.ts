@@ -34,7 +34,7 @@ export const migrateProjects = async ({
     console.info(
       `Перенесен project ${srcProject.name} (${
         res.success ? "Ok" : "Error"
-      }) ${++i}/${needMigrateProjects.length + 1}`
+      }) ${++i}/${needMigrateProjects.length}`
     );
   }
 };

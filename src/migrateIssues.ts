@@ -56,7 +56,7 @@ export const migrateIssues = async ({
     console.info(
       `Перенесено issue ${srcIssue.identifier} (${
         res.success ? "Ok" : "Error"
-      }) ${++i}/${needMigrateIssues.length + 1}`
+      }) ${++i}/${needMigrateIssues.length}`
     );
   }
   if (i === 0) {
